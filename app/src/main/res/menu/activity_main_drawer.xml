@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_registrar"
+            android:title="Logueate!"/>
+        <item
+            android:id="@+id/nav_nosotros"
+            android:title="Sobre nosotros" />
+        <item
+            android:id="@+id/nav_gps"
+            android:title="Ubicación" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="Galería" />
+    </group>
+
+    <group>
+        <item android:title="Servicios"></item>
+        <menu>
+            <item
+                android:id="@+id/nav_ventas"
+                android:title="Ventas" />
+            <item
+                android:id="@+id/nav_repair"
+                android:title="Reparaciones" />
+            <item
+                android:id="@+id/nav_alquiler"
+                android:title="Alquiler" />
+        </menu>
+    </group>
+
+            <item
+                android:id="@+id/nav_login"
+                android:title="Salir" />
+
+
+</menu>

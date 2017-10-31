@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DisenoPbl</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="titulo">¿Quienés somos?</string>
+    <string name="botonnosotros">Sobre nosotros</string>
+    <string name="botonmaps">Ubicación</string>
+    <string name="botongallery">Galería</string>
+    <string name="botonservicio">Servicios</string>
+    <string name="botonventa">Ventas</string>
+    <string name="botonrepair">Reparaciones</string>
+    <string name="botonalquiler">Alquiler</string>
+    <string name="botonsalir">Salir</string>
+    <string name="descripcion">Descripcion...</string>
+
+
+    <string name="action_settings">Ajustes</string>
+    <string name="title_activity_tabprincipal">tabprincipal</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>
