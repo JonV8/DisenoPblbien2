@@ -89,6 +89,9 @@ public class MainActivity extends AppCompatActivity
 
         int id = item.getItemId();
 
+
+
+
         if (id == R.id.nav_gallery) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, FragGaleria.newInstance(b)).commit();
         } else if (id == R.id.nav_nosotros) {
