@@ -15,11 +15,11 @@ import com.example.peperoni.disenopbl.R;
 
 public class TabConsolas extends Fragment {
         private static final String TAG = "TabConsolas";
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tabconsolas_fragment,container,false);
+
         return view;
     }
 }
