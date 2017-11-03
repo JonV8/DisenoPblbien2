@@ -1,8 +1,10 @@
 <resources>
+    <!--Titulo-->
     <string name="app_name">DisenoPbl</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--Nombres Tabs-->
     <string name="titulo">¿Quienés somos?</string>
     <string name="botonnosotros">Sobre nosotros</string>
     <string name="botonmaps">Ubicación</string>
@@ -18,4 +20,15 @@
     <string name="action_settings">Ajustes</string>
     <string name="title_activity_tabprincipal">tabprincipal</string>
     <string name="section_format">Hello World from section: %1$d</string>
+
+    <!--menu desplegable y sus opciones-->
+    <string-array name="desplegables">
+        <item>Servicios</item>
+    </string-array>
+
+    <string-array name="services">
+        <item>Ventas</item>
+        <item>Reparaciones</item>
+        <item>Alquiler</item>
+    </string-array>
 </resources>
