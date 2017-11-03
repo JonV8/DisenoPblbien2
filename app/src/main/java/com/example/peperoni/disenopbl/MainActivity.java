@@ -18,6 +18,7 @@ import com.example.peperoni.disenopbl.fragapp.FragGaleria;
 import com.example.peperoni.disenopbl.fragapp.FragLogin;
 import com.example.peperoni.disenopbl.fragapp.FragNosotros;
 import com.example.peperoni.disenopbl.fragapp.FragUbicacion;
+import com.example.peperoni.disenopbl.fragreparaciones.FragmentoReparaciones;
 import com.example.peperoni.disenopbl.fragventas.FragmentoVentas;
 
 public class MainActivity extends AppCompatActivity
@@ -102,6 +103,8 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentoVentas()).commit();
         }else if(id == R.id.nav_registrar){
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,new FragLogin()).commit();
+        }else if (id == R.id.nav_repair) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentoReparaciones()).commit();
         }
 
 
