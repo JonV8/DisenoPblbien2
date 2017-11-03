@@ -6,12 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 import com.example.peperoni.disenopbl.R;
-
-/**
- * Created by dam2-jon on 30/10/2017.
- */
 
 public class TabConsolas extends Fragment {
         private static final String TAG = "TabConsolas";
@@ -19,7 +16,8 @@ public class TabConsolas extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tabconsolas_fragment,container,false);
-
+        GridView catConsolas= (GridView) view.findViewById(R.id.catConsolas);
+        catConsolas.setAdapter(new AdaptadorConsolas());
         return view;
     }
 }
