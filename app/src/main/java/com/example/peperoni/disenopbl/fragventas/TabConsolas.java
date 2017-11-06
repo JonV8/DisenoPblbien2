@@ -17,7 +17,7 @@ public class TabConsolas extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tabconsolas_fragment,container,false);
         GridView catConsolas= (GridView) view.findViewById(R.id.catConsolas);
-        catConsolas.setAdapter(new AdaptadorConsolas());
+        catConsolas.setAdapter(new AdaptadorConsolas(this));
         return view;
     }
 }

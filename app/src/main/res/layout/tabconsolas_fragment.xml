@@ -9,6 +9,7 @@
         android:layout_height="match_parent"
         android:id="@+id/catConsolas"
         android:numColumns="3">
+
     </GridView>
 
 </LinearLayout>
