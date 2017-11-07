@@ -32,10 +32,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBiH1v8RpDq_se8K3Lw3m363OYp_Rg_FPY" />
 
-        <activity
-            android:name=".fragapp.tabprincipal"
-            android:label="@string/title_activity_tabprincipal"
-            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
