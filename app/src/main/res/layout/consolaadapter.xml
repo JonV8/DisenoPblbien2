@@ -34,6 +34,15 @@
             android:id="@+id/precio"
             android:layout_below="@+id/nombre"
             android:layout_alignLeft="@+id/nombre" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/marca"
+            android:layout_below="@+id/nombre"
+            android:layout_alignLeft="@+id/nombre" />
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
