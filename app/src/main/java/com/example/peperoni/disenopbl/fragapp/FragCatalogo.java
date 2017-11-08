@@ -11,22 +11,14 @@ import android.view.ViewGroup;
 import com.example.peperoni.disenopbl.R;
 
 /**
- * Created by Kristian on 26/10/2017.
+ * Created by Kristian on 30/10/2017.
  */
 
-public class FragGaleria extends Fragment{
+public class FragCatalogo extends Fragment {
+    public FragCatalogo() {
 
-    public FragGaleria() { super();}
 
-
-    public static  FragGaleria newInstance (Bundle b){
-        FragGaleria fg= new FragGaleria();
-        if(b!=null){
-            fg.setArguments(b);
-        }
-        return fg;
     }
-
 
     @Override
     public void onAttach(Context context) {
@@ -41,7 +33,8 @@ public class FragGaleria extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragmentogaleria,container,false);
+        final View miVista = inflater.inflate(R.layout.fragmentocatalogo, container, false);
+        return miVista;
     }
 
     @Override
