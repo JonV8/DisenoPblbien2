@@ -30,9 +30,9 @@ public class AdaptadorConsolas extends RecyclerView.Adapter<AdaptadorConsolas.Co
         public ConsolasViewHolder(View v) {
             super(v);
             imagen = (ImageView)v.findViewById(R.id.imagen);
-            nombre = (TextView) v.findViewById(R.id.nombre);
-            marca = (TextView) v.findViewById(R.id.marca);
-            precio = (TextView) v.findViewById(R.id.precio);
+            nombre = (TextView) v.findViewById(R.id.modelo);
+            //marca = (TextView) v.findViewById(R.id.);
+            //precio = (TextView) v.findViewById(R.id.);
         }
         }
     public AdaptadorConsolas(List<Consola> items) {
@@ -42,7 +42,7 @@ public class AdaptadorConsolas extends RecyclerView.Adapter<AdaptadorConsolas.Co
     @Override
     public ConsolasViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(misConsolas.getContext())
-                .inflate(R.layout.tabconsolas_fragment, viewGroup, false);
+                .inflate(R.layout.consolaadapter, viewGroup, false);
         return new ConsolasViewHolder(v);
     }
 
