@@ -10,10 +10,6 @@ import android.view.ViewGroup;
 
 import com.example.peperoni.disenopbl.R;
 
-/**
- * Created by Kristian on 26/10/2017.
- */
-
 public class FragGaleria extends Fragment{
 
     public FragGaleria() { super();}

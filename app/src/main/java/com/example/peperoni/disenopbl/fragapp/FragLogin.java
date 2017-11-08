@@ -127,11 +127,11 @@ public class FragLogin extends Fragment {
     }
 
     private void pasarFragmento() {
-        Fragment Fragcatalogo = new FragCatalogo();
+       /* Fragment Fragcatalogo = new FragCatalogo();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.contenedor, new FragmentoVentas());
         transaction.addToBackStack(null);
-        transaction.commit();
+        transaction.commit();*/
 
     }
 
