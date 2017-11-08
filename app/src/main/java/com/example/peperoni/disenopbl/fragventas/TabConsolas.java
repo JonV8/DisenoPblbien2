@@ -6,6 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9dd5ae82d9809153fb537669386ad10811998111
 
 import com.example.peperoni.disenopbl.R;
 
