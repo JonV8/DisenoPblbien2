@@ -31,4 +31,5 @@
         <item>Reparaciones</item>
         <item>Alquiler</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 </resources>

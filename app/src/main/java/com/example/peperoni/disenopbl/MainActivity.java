@@ -1,5 +1,6 @@
 package com.example.peperoni.disenopbl;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.example.peperoni.disenopbl.fragapp.FragGaleria;
 import com.example.peperoni.disenopbl.fragapp.FragLogin;
@@ -24,10 +26,15 @@ import com.example.peperoni.disenopbl.fragventas.FragmentoVentas;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Button ubicacion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -97,7 +104,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_nosotros) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, FragNosotros.newInstance(b)).commit();
         } else if (id == R.id.nav_gps) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, FragUbicacion.newInstance(b)).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new MapsActivity()).commit();
         } else if (id == R.id.nav_ventas) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentoVentas()).commit();
         }else if(id == R.id.nav_registrar){
