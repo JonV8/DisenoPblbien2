@@ -37,8 +37,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.ArrayDeque;
 import java.util.HashMap;
 
+
 public class MapsActivity extends Fragment implements  OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks, LocationListener {
+
 
 
     private GoogleMap mMap;

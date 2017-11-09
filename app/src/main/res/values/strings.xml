@@ -14,7 +14,30 @@
     <string name="botonrepair">Reparaciones</string>
     <string name="botonalquiler">Alquiler</string>
     <string name="botonsalir">Salir</string>
-    <string name="descripcion">Descripcion...</string>
+    <string name="descripcion">Sobre nosotros:\n
+            \n
+            Misión\n
+
+            Somos una tienda de electrónica que se dedica a distintas actividades.\n
+            \n
+            1. Venta y alquiler de videojuegos\n
+            Si bien el aqluiler de videojuegos es un negocio que está mayormentye acabado, nosotros te ofrecemos la posibilidad
+            de alquilarlo antes de comprarlopara que puedas probar si es lo que pensabas que sería, o probar si funciona en tu
+            PC y cuando vengas a devolverlo podrás comprarlo sin arriesgarte a que sea una mala compra.\n
+            \n
+            2.Venta y reparación de consolas, smartphones y tablets\n
+            Nuestro servicio técnico especializado se encarga de reparar todo tipo de dispositivos de juego móviles y tablets
+            aunque no hayan sido adquiridos en nuestra tienda.\n
+
+            \n
+            Visión\n
+            Queremos poder expandir nuestro modelo de negocio sobretodo en el aspecto de poder probar el videojuego antes de
+            comprarlo para que así el cliente pueda tener una compra más satisfactoria al saber que está comprando con la
+            seguridad de que para él será una buena adquisición.\n
+            \n
+            Valores\n
+            Somos una tienda comprometida con nuestros clientes que busca ofrecer la mejor experiencia en todas sus compras.
+</string>
 
 
     <string name="action_settings">Ajustes</string>

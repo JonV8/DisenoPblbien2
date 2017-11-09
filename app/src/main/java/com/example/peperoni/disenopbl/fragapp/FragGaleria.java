@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,11 @@ import com.example.peperoni.disenopbl.R;
  */
 
 public class FragGaleria extends Fragment{
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter galeryAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+
 
     public FragGaleria() { super();}
 
@@ -36,6 +43,13 @@ public class FragGaleria extends Fragment{
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragmentogaleria);
+        mRecyclerView = (RecyclerView) findViewById(R.id.recyclergaleria);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        galeryAdapter = new ;
+        mRecyclerView.setAdapter(galeryAdapter);
     }
 
     @Nullable
