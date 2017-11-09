@@ -18,11 +18,6 @@ import com.example.peperoni.disenopbl.R;
 
 public class FragGaleria extends Fragment{
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter galeryAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-
-
     public FragGaleria() { super();}
 
 
@@ -43,13 +38,6 @@ public class FragGaleria extends Fragment{
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragmentogaleria);
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclergaleria);
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        galeryAdapter = new ;
-        mRecyclerView.setAdapter(galeryAdapter);
     }
 
     @Nullable
