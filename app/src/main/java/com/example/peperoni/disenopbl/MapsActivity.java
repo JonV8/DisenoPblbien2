@@ -200,8 +200,8 @@ public class MapsActivity extends Fragment implements  OnMapReadyCallback,
         // Initialize the location fields
         LatLng ultima = new LatLng(-34, 151);
         if (mLastLocation != null) {
-            ultima = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
-            mMap.addMarker(new MarkerOptions().position(ultima).title("Localizacion"));
+           ultima = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
+           mMap.addMarker(new MarkerOptions().position(ultima).title("Localizacion"));
             mMap.moveCamera(CameraUpdateFactory.newLatLng(ultima));
             Log.d("kriss2","error de localizacion"+mLastLocation.getLatitude());
         } else {
