@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity
 
 
         if (id == R.id.nav_gallery) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, FragGaleria.newInstance(b)).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragGaleria()).commit();
         } else if (id == R.id.nav_nosotros) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, FragNosotros.newInstance(b)).commit();
         } else if (id == R.id.nav_gps) {

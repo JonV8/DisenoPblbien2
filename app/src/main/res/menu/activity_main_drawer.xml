@@ -5,20 +5,25 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_registrar"
+            android:icon="@drawable/ic_login"
             android:title="Logueate!"/>
         <item
+            android:icon="@drawable/ic_nosotros"
             android:id="@+id/nav_nosotros"
             android:title="Sobre nosotros" />
         <item
+            android:icon="@drawable/ic_gps"
             android:id="@+id/nav_gps"
             android:title="Ubicación" />
         <item
+            android:icon="@drawable/ic_menu_gallery"
             android:id="@+id/nav_gallery"
             android:title="Galería" />
     </group>
 
     <group>
-        <item android:title="Servicios"></item>
+        <item android:title="Servicios"
+            android:icon="@drawable/ic_servicios"></item>
         <menu>
             <item
                 android:id="@+id/nav_ventas"
@@ -33,6 +38,7 @@
     </group>
 
             <item
+                android:icon="@drawable/ic_salir"
                 android:id="@+id/nav_login"
                 android:title="Salir" />
 
