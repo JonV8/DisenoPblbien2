@@ -206,6 +206,7 @@ public class MapsActivity extends Fragment implements  OnMapReadyCallback,
             Log.d("kriss2","error de localizacion"+mLastLocation.getLatitude());
         } else {
             Log.d("kriss2","error de localizacion");
+
         }
 
 
