@@ -102,9 +102,9 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_gallery) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragGaleria()).commit();
-        } else if (id == R.id.nav_nosotros) {
+        } /*else if (id == R.id.nav_nosotros) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, FragNosotros.newInstance(b)).commit();
-        } else if (id == R.id.nav_gps) {
+        } */else if (id == R.id.nav_gps) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new MapsActivity()).commit();
         } else if (id == R.id.nav_ventas) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentoVentas()).commit();

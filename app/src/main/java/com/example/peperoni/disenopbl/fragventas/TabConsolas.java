@@ -1,5 +1,6 @@
 package com.example.peperoni.disenopbl.fragventas;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,15 +10,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.peperoni.disenopbl.R;
 
@@ -25,19 +29,23 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.AbstractCollection;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 public class TabConsolas extends Fragment {
-    private String tipo_producto = "Consolas";
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
     private static final String TAG = "TabConsolas";
     List<Consola> items=new ArrayList<Consola>();
+    private JSONObject jsonBody;
+    private String requestBody;
+    private List<String> requestQueue;
+
 
     @Nullable
     @Override
@@ -50,18 +58,18 @@ public class TabConsolas extends Fragment {
         lManager = new LinearLayoutManager(container.getContext());
         recycler.setLayoutManager(lManager);
 
-        final String tipo_producto="Consolas";
-
-        Map<String, String> jsonParams = new HashMap<String, String>();
-
-        jsonParams.put("tipo_producto", tipo_producto);
-
         String json ="http://192.168.6.188/wsPBL/post.php";
-
         RequestQueue queue = Volley.newRequestQueue(getContext());
+        //enviarTipo(json);
+        JSONObject jsonBody = new JSONObject();
+        try {
+            jsonBody.put("tipo_producto", "Consolas");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         // prepare the Request
-        JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.POST, json, null,
+        JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.POST, json, jsonBody,
                 new Response.Listener<JSONObject>()
                 {
                     @Override
@@ -95,17 +103,7 @@ public class TabConsolas extends Fragment {
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Error.Response", "error");
                     }
-                }){
-
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
-
-                headers.put("Content-Type", "application/json; charset=utf-8");
-                headers.put("tipo_producto", tipo_producto);
-                return headers;
-            }
-        };
+                });
         // add it to the RequestQueue
         queue.add(getRequest);
 
@@ -113,5 +111,4 @@ public class TabConsolas extends Fragment {
 
         return view;
     }
-
 }
