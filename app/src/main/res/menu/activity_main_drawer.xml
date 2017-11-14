@@ -15,9 +15,13 @@
             android:icon="@drawable/ic_menu_gallery"
             android:id="@+id/nav_gallery"
             android:title="Galería" />
+        <item
+            android:id="@+id/nav_nosotros"
+            android:title="Nosotros" />
     </group>
 
-    <group>
+    <group android:visible="false"
+        android:id="@+id/grupo">
         <item android:title="Servicios"
             android:icon="@drawable/ic_servicios"></item>
         <menu>

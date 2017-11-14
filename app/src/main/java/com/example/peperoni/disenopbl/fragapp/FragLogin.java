@@ -22,6 +22,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.peperoni.disenopbl.MainActivity;
+import com.example.peperoni.disenopbl.PasarDatos;
 import com.example.peperoni.disenopbl.R;
 import com.example.peperoni.disenopbl.fragventas.FragmentoVentas;
 
@@ -38,6 +39,7 @@ public class FragLogin extends Fragment {
     private String usuario;
     private RequestQueue colaPeticiones;
     private StringRequest strPeticion;
+    private PasarDatos interfaz;
 
     public FragLogin() {
         super();
@@ -60,7 +62,6 @@ public class FragLogin extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         final View miVista = inflater.inflate(R.layout.fragmentologin, container, false);
         asociarControles(miVista);
-
         btnAcceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +77,7 @@ public class FragLogin extends Fragment {
         btnRegistrar = (Button) miVista.findViewById(R.id.btnRegistrar);
         txtUsuario = (TextView) miVista.findViewById(R.id.txtUsuario);
         txtPassword = (TextView) miVista.findViewById(R.id.txtPassword);
+        interfaz = (PasarDatos) getContext();
     }
 
     @Override
@@ -97,8 +99,10 @@ public class FragLogin extends Fragment {
                     public void onResponse(String response) {
                         if (response.trim().equalsIgnoreCase("true")) {
                             usuario= txtUsuario.getText().toString().toLowerCase();
-                            setUsuario(usuario);
                             Toast.makeText(miVista.getContext(), "Acceso CORRECTO", Toast.LENGTH_SHORT).show();
+
+                            interfaz.nombreUsuario(usuario);
+
                             pasarFragmento();
                         }else {
                             Toast.makeText(miVista.getContext(), "Acceso INCORRECTO",
@@ -127,19 +131,18 @@ public class FragLogin extends Fragment {
     }
 
     private void pasarFragmento() {
+
         Fragment Fragcatalogo = new FragCatalogo();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.contenedor, new FragmentoVentas());
         transaction.addToBackStack(null);
         transaction.commit();
+        try {
+            this.finalize();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
 
     }
 
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
 }

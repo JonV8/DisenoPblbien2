@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.peperoni.disenopbl.fragapp.FragGaleria;
 import com.example.peperoni.disenopbl.fragapp.FragLogin;
@@ -23,10 +24,16 @@ import com.example.peperoni.disenopbl.fragapp.FragUbicacion;
 import com.example.peperoni.disenopbl.fragreparaciones.FragmentoReparaciones;
 import com.example.peperoni.disenopbl.fragventas.FragmentoVentas;
 
+import java.security.acl.Group;
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, PasarDatos {
 
     private Button ubicacion;
+    public  TextView nUsu;
+    private String usu;
+    private Boolean visible = true;
+    private Group grupo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +62,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View v = navigationView.getHeaderView(0);
+        nUsu= v.findViewById(R.id.usesion);
     }
 
     @Override
@@ -94,17 +103,13 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         Bundle b = new Bundle();
-
         int id = item.getItemId();
-
-
-
 
         if (id == R.id.nav_gallery) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragGaleria()).commit();
-        } /*else if (id == R.id.nav_nosotros) {
+        } else if (id == R.id.nav_nosotros) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, FragNosotros.newInstance(b)).commit();
-        } */else if (id == R.id.nav_gps) {
+        } else if (id == R.id.nav_gps) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new MapsActivity()).commit();
         } else if (id == R.id.nav_ventas) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragmentoVentas()).commit();
@@ -119,4 +124,21 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+    @Override
+    public void nombreUsuario(String nombre) {
+        nUsu.setText(nombre);
+        mostrarMenus();
+    }
+
+    private void mostrarMenus() {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        grupo= (Group) findViewById(R.id.grupo);
+
+        navigationView.getMenu().setGroupVisible(R.id.grupo, true);
+
+    }
+
+
 }
