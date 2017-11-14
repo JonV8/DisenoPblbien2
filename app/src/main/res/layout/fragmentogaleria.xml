@@ -17,16 +17,5 @@
         android:layout_centerHorizontal="true"
         />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:src="@drawable/tienda1"
-
-
-        />
 
 </RelativeLayout>
