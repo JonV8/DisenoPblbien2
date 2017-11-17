@@ -10,4 +10,5 @@
     <color name="group_divider_color">#80CBC4</color>
     <color name="list_item_title">#AAAAAA</color>
     <color name="list_group_title">#808080</color>
+    <color name="black">#000</color>
 </resources>
