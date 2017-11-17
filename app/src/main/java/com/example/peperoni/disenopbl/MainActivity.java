@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.example.peperoni.disenopbl.Alquiler.FragAlquiler;
 import com.example.peperoni.disenopbl.adapter.CustomExpandableListAdapter;
 import com.example.peperoni.disenopbl.datasource.ExpandableListDataSource;
+import com.example.peperoni.disenopbl.fragapp.FragCatalogo;
 import com.example.peperoni.disenopbl.fragapp.FragGaleria;
 import com.example.peperoni.disenopbl.fragapp.FragLogin;
 import com.example.peperoni.disenopbl.fragapp.FragNosotros;
@@ -127,6 +128,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         vistaCabecera = navigationView.getHeaderView(0);
         nUsu= vistaCabecera.findViewById(R.id.usesion);
+        getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new FragCatalogo()).commit();
         mExpandableListView.setVisibility(View.INVISIBLE);
 
     }
