@@ -6,4 +6,8 @@
     <color name="tabscolor">#C0CB32</color>
     <color name="notificaciones">#A8AF2B</color>
     <color name="detalles">#AE8961</color>
+    <color name="white">#fff</color>
+    <color name="group_divider_color">#80CBC4</color>
+    <color name="list_item_title">#AAAAAA</color>
+    <color name="list_group_title">#808080</color>
 </resources>

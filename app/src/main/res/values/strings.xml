@@ -43,6 +43,9 @@
     <string name="action_settings">Ajustes</string>
     <string name="title_activity_tabprincipal">tabprincipal</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="desplegable">Menu</string>
 
     <!--menu desplegable y sus opciones-->
     <string-array name="desplegables">
@@ -55,4 +58,5 @@
         <item>Alquiler</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
+    <string name="servicetitle">Servicio</string>
 </resources>

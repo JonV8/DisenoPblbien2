@@ -22,6 +22,7 @@
 
     <group android:visible="false"
         android:id="@+id/grupo">
+<!--
         <item android:title="Servicios"
             android:icon="@drawable/ic_servicios"></item>
         <menu>
@@ -35,6 +36,7 @@
                 android:id="@+id/nav_alquiler"
                 android:title="Alquiler" />
         </menu>
+      -->
     </group>
 
             <item
